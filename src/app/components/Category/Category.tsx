@@ -3,6 +3,7 @@
 import { QuestionsApi } from "@/api";
 import { useEffect, useState } from "react";
 import { Category as CategoryType } from '@/types';
+import styles from "./Category.module.css"
 
 export function Category({slug}: {slug:string}) {
     const [category, setCategory] = useState<CategoryType | null>(null)
@@ -19,12 +20,12 @@ export function Category({slug}: {slug:string}) {
 
     if(!category) {
         return (
-            <p>Flokkur fannst ekki</p>
+            <p className={styles.mainContent}>Flokkur fannst ekki</p>
         )
     }
 
     return (
-        <div>
+        <div className={styles.mainContent}>
             <h2>{category.name} Spurningar</h2>
         </div>
     );

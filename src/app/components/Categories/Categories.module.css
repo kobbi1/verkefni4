@@ -1,3 +1,18 @@
 .cats  {
-    background-color: beige;
+    background-color: #D4BE86;
+    height:100vh;
+    overflow:hidden;
+    margin:0 auto;
+    text-align:center;
+}
+
+.flokkar{
+    padding:1rem;
+}
+
+.flokkur{
+    padding:1rem;
+    border:2px solid black;
+    margin:1rem;
+    font-weight:bold;
 }

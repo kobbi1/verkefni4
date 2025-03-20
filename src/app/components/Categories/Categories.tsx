@@ -45,9 +45,9 @@ export default function Categories({title}:Props) {
         )}
         
         {uiState === "data" && (
-          <ul>
+          <ul className={styles.flokkar}>
             {categories?.data.map((category, index) => (
-                <li key={index}>
+                <li className={styles.flokkur} key={index}>
                     <Link href={`/flokkar/${category.slug}`}>{category.name}</Link>
                 </li>
             ))}

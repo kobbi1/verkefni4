@@ -1,0 +1,40 @@
+.body {
+    background-color: #D4BE86;
+    height:100vh;
+    padding:1rem;
+    text-align:center;
+}
+.questions {
+    border: 1px solid black;
+    padding: 1rem;
+    margin:1rem;
+  }
+
+.questionTitle{
+    text-decoration:underline;
+}
+
+  .question__form {
+    display: grid;
+    grid-gap: var(--spacing);
+  }
+
+  .question__form button {
+    max-inline-size: fit-content;
+    padding-inline: var(--spacing);
+    padding-block: calc(var(--spacing) / 2);
+  }
+
+  .answer {
+    margin-inline: calc(var(--spacing) * -1);
+    padding-inline: var(--spacing);
+    padding-block: calc(var(--spacing) / 2);
+  }
+
+  .answer--correct {
+    background-color: var(--color-correct);
+  }
+
+  .answer--incorrect {
+    background-color: var(--color-incorrect);
+  }

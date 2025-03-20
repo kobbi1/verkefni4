@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { QuestionsApi } from "@/api";
 import { Question } from "@/types";
+import styles from "./Questions.module.css"
 
 type Props = {
     slug: string; 
@@ -32,15 +33,15 @@ export default function Questions({ slug }: Props) {
     if (error) return <p>{error}</p>;
 
     return (
-        <div>
+        <div className={styles.body}>
             {questions.length > 0 ? (
                 <ul>
                     {questions.map((question) => (
-                        <li key={question.id}>
-                            <h4>{question.text}</h4>
+                        <li className={styles.questions} key={question.id}>
+                            <h3 className={styles.questionTitle}>{question.text}</h3>
                             <ul>
                                 {question.answers.map((answer) => (
-                                    <li key={answer.id}>
+                                    <li className={styles.answer} key={answer.id}>
                                         {answer.text} {answer.correct && "✅👌"}
                                     </li>
                                 ))}
