@@ -23,6 +23,7 @@ export default function Questions({ slug }: Props) {
                 setQuestions(fetchedQuestions || []);
             } catch (err) {
                 setError("gat ekki náð spurningum");
+                console.error(err);
             }
         }
         fetchData();
