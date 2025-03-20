@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { QuestionsApi } from "@/api";
 import { Question } from "@/types";
-import styles from "./Questions.module.css"
+import styles from "./Questions.module.css"; // Import CSS module
 
 type Props = {
     slug: string; 
@@ -19,20 +19,21 @@ export default function Questions({ slug }: Props) {
             try {
                 const foundCategory = await api.getCategory(slug);
                 if (!foundCategory) throw new Error("Flokkur ekki fundinn");
+                
                 const fetchedQuestions = await api.getQuestions(foundCategory.id);
-
                 setQuestions(fetchedQuestions || []);
             } catch (err) {
+                setError("Gat ekki náð spurningum");
                 console.error(err);
             }
         }
         fetchData();
     }, [slug]);
 
-    if (error) return <p>{error}</p>;
-
     return (
         <div className={styles.body}>
+            {error && <p className={styles.errorMessage}>{error}</p>} {}
+
             {questions.length > 0 ? (
                 <ul>
                     {questions.map((question) => (
