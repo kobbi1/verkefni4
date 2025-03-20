@@ -1,5 +1,5 @@
 ## Hlekkur á keyrandi síðu
-[Verkefni 4 hlekkur](https://verkefni4-49s0qm9ch-jakobs-projects-5997e83b.vercel.app/)
+[Verkefni 4 hlekkur](https://verkefni4-delta.vercel.app/)
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
