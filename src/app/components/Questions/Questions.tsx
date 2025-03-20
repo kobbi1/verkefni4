@@ -23,7 +23,6 @@ export default function Questions({ slug }: Props) {
 
                 setQuestions(fetchedQuestions || []);
             } catch (err) {
-                setError("gat ekki náð spurningum");
                 console.error(err);
             }
         }
@@ -50,7 +49,7 @@ export default function Questions({ slug }: Props) {
                     ))}
                 </ul>
             ) : (
-                <p>Engar spurningar til fyrir þennan flokk</p>
+                <p>Því miður eru ekki til neinar spurningar í þessum flokk</p>
             )}
         </div>
     );

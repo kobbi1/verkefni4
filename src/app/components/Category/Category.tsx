@@ -20,7 +20,7 @@ export function Category({slug}: {slug:string}) {
 
     if(!category) {
         return (
-            <p className={styles.mainContent}>Flokkur fannst ekki</p>
+            <p className={styles.mainContent}>404 Flokkur fannst ekki</p>
         )
     }
 
